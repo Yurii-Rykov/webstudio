@@ -1,0 +1,74 @@
+.link {
+    //padding: 32px 0;
+    // font-weight: 500;
+    // letter-spacing: 0.02em;
+    margin: 0;
+    color: currentColor;
+    text-decoration: none;
+
+    transition: color 250ms $timing;
+
+    &:hover,
+    &:focus {
+        color: $accentColor; 
+    }
+
+    // @media screen and (min-width: $tablet) {
+    //     padding: 32px 0;
+    // }
+}
+
+.link--current {
+    position: relative;
+    padding: 32px 0;
+    color: $accentColor;
+
+    @media screen and (min-width: $tablet)  {
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 4px;
+            margin: inherit;
+            display: block;
+            background-color: $accentColor;
+            border-radius: 2px;
+        }
+    }
+}
+
+.link__envelope-icon,
+.link__tel-icon {
+    margin-right: 10px;
+    fill: currentColor;
+
+    @media screen and (max-width: ($tablet - 1px)) {
+        display: none;
+    }
+}
+
+.link__envelope-icon {
+    @media screen and (min-width: $tablet) {
+        width: 14px;
+        height: 10px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 16px;
+        height: 12px;
+    }
+}
+
+.link__tel-icon {
+    @media screen and (min-width: $tablet) {
+        width: 10px;
+        height: 14px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 10px;
+        height: 16px;
+    }
+}

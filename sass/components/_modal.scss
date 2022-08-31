@@ -1,0 +1,28 @@
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 450px;
+    height: 609px;
+    width: 100%;
+    background-color: $bgColor;
+    box-shadow: 0px 1px 3px $shadowColor2, 
+                0px 1px 1px $shadowColor3,
+                0px 2px 1px $shadowColor4;
+    border-radius: 4px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms $timing, 
+                opacity 250ms $timing;
+
+    z-index: 100;
+
+    .backdrop--hidden & {
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(0.4);
+    }
+
+    @media screen and (min-width: $desktop) {
+        max-width: 528px;
+        height: 581px;
+    }
+}
